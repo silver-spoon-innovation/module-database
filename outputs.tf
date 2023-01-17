@@ -1,5 +1,5 @@
 output "project_name" {
-	value = mongodbatlas_project.atlas-project.name
+	value = mongodbatlas_project.project.name
 }
 output "user1" {
 	value = mongodbatlas_database_user.user.username
