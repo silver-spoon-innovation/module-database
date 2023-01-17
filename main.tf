@@ -62,7 +62,7 @@ resource "mongodbatlas_privatelink_endpoint" "atlaspl" {
   region        = var.aws_region
 }
 
-resource "aws_security_group" "default" {
+resource "aws_security_group" "ptfe_service" {
   vpc_id      = var.vpc_id
   ingress {
     from_port = 0
@@ -84,8 +84,8 @@ resource "aws_vpc_endpoint" "ptfe_service" {
   vpc_id             = var.vpc_id
   service_name       = mongodbatlas_privatelink_endpoint.atlaspl.endpoint_service_name
   vpc_endpoint_type  = "Interface"
-  subnet_ids         = var.aws_subnet_ids
-  security_group_ids = [aws_security_group.default.id]
+  subnet_ids         = var.aws_private_subnet_ids
+  security_group_ids = [aws_security_group.ptfe_service.id]
 }
 
 resource "mongodbatlas_privatelink_endpoint_service" "atlaseplink" {

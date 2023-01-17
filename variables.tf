@@ -32,7 +32,7 @@ variable "aws_region" {
 variable "vpc_id" {
   type        = string
 }
-variable "aws_subnet_ids" {
+variable "aws_private_subnet_ids" {
   type        = list(string)
 }
 variable "route53_id" {
