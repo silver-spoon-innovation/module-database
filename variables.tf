@@ -22,9 +22,8 @@ variable "dbuser" {
   type        = string
   description = "MongoDB Atlas Database User Name"
 }
-variable "ip_address" {
+variable "cidr_block" {
   type        = string
-  description = "The IP address that the cluster will be accessed from, can also be a CIDR range or AWS security group"
 }
 variable "aws_region" {
   type        = string

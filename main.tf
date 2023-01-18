@@ -30,7 +30,7 @@ resource "random_password" "db-user-password" {
 # Create Database IP Access List
 resource "mongodbatlas_project_ip_access_list" "ip" {
   project_id = mongodbatlas_project.project.id
-  ip_address = var.ip_address
+  cidr_block = var.cidr_block
 }
 
 # Create an Atlas Advanced Cluster
