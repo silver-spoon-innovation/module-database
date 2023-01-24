@@ -10,6 +10,6 @@ output "ipaccesslist" {
 output "connection_strings" {
   	value = mongodbatlas_cluster.cluster.connection_strings[0].standard_srv
 }
-output "plstring" {
-  value = lookup(mongodbatlas_cluster.cluster.connection_strings[0].aws_private_link_srv, aws_vpc_endpoint.ptfe_service.id)
-}
+# output "plstring" {
+#   value = lookup(mongodbatlas_cluster.cluster.connection_strings[0].aws_private_link_srv, aws_vpc_endpoint.ptfe_service.id)
+# }

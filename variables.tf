@@ -25,18 +25,18 @@ variable "dbuser" {
 variable "cidr_block" {
   type        = string
 }
-variable "aws_region" {
-  type        = string
-}
-variable "vpc_id" {
-  type        = string
-}
-variable "aws_private_subnet_ids" {
-  type        = list(string)
-}
-variable "route53_id" {
-  type        = string
-}
+# variable "aws_region" {
+#   type        = string
+# }
+# variable "vpc_id" {
+#   type        = string
+# }
+# variable "aws_private_subnet_ids" {
+#   type        = list(string)
+# }
+# variable "route53_id" {
+#   type        = string
+# }
 variable "environment" {
   type        = string
 }
